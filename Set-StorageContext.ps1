@@ -10,4 +10,3 @@ $tokenParams = @{
     Context    = $context
     FullUri    = $true
 }
-$contentUri = New-AzStorageBlobSASToken @tokenParams
