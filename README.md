@@ -9,6 +9,8 @@ Audit or deploy the CrowdStrike Falcon Sensor to windows endpoints using Azure P
 
 * The machine configuration extension is required for this Azure Policy. To deploy the latest version of the Machine Configuration extension at scale including identity requirements, follow the steps in Create a policy assignment to identify noncompliant resources. Create the following assignment with Azure Policy: [Deploy prerequisites to enable Guest Configuration policies on virtual machines](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policySetDefinitions/Guest%20Configuration/Prerequisites.json)
 
+* The following documentation is showing the deployment of the Falcon sensor with Azure Policy. Please switch the file in your testing and deployment to FalconSensorAuditPolicy.ps1 to audit only.
+
 ## Configuration
 
 1.Install the machine configuration DSC resource module from PowerShell Gallery. Reference - [Setup up local machine for authoring](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-set-up-authoring-environment)
