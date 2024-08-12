@@ -3,7 +3,7 @@
 Audit or deploy the CrowdStrike Falcon Sensor to windows endpoints using Azure Policy, PowerShell DSC and Azure Machine Configuration.
 
 > [!IMPORTANT]
-> Before running the following steps, please ensure that the guidance has been ollowed for the install/uninstall of the Falcon Sensor through the Falcon APIs on a windows >endpoint. [Falcon Powershell Installation Scripts](https://github.com/CrowdStrike/falcon-scripts/tree/main/powershell/install)
+> Please make sure you have followed the instructions for installing and uninstalling the Falcon Sensor via the Falcon APIs on a Windows endpoint before proceeding with the following steps. [Falcon Powershell Installation Scripts](https://github.com/CrowdStrike/falcon-scripts/tree/main/powershell/install)
 
 1.Install the machine configuration DSC resource module from PowerShell Gallery. Reference - [Setup up local machine for authoring](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-set-up-authoring-environment)
 
