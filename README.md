@@ -19,7 +19,10 @@ Install-Module -Name GuestConfiguration
 
 > [!NOTE]
 > Please use PowerShell 5.1 for the next step
+
 2.**Using PowerShell 5.1**, author the DSC coniguration. Reference - [Author a configuration](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-create-package#author-a-configuration)
+
+When running the steps below you will be prompted for your CustomerId (FalconClientId) and your CustomerAuthentication (FalconClientSecret).
 
 ```powershell
 . .\FalconSensorDeployPolicy.ps1
@@ -29,6 +32,7 @@ Rename-Item -Path .\localhost.mof -NewName FalconSensorDeployPolicy.mof -PassThr
 
 > [!NOTE]
 > Please use PowerShell 7.3+ for the next step
+
 3.**Using PowerShell 7.3** - create a package that will audit and apply the configuration (Set).
 
 Example
@@ -42,7 +46,6 @@ $params = @{
     Force         = $true
 }
 New-GuestConfigurationPackage @params
-
 ```
 
 4.This step requires a storage account. If you do not have a storage account and container please create those items before proceeding. Use Set-BlobContext to store the context of your storage account. Please note the connection string of the storage account.  

@@ -1,3 +1,19 @@
+<#
+.SYNOPSIS
+Downloads and install the CrowdStrike Falcon Sensor for Windows using Azure Policy, Machine Configuration and PowerShell DSC.
+.DESCRIPTION
+Using Azure Policy, Machine Configuration and PowerShell DSC to deploy the Falcon Sensor at Scale for windows endpoints. 
+
+.PARAMETER FalconInstallScriptUri
+The URI of the falcon installation script
+.PARAMETER FalconScriptPath
+The location of the script
+.PARAMETER CustomerId
+The FalconClientId, this aligns to the CrowdStrike Falcon OAuth2 API Client Id
+.PARAMETER CustomerAuthentication
+The FalconClientSecret, this aligns to the CrowdStrike Falcon OAuth2 API Client Secret
+#>
+
 Configuration FalconSensorDeployPolicy
 {
     param
