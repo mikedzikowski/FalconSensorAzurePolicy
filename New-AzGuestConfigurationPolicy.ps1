@@ -1,12 +1,12 @@
 $PolicyConfig      = @{
     PolicyId      = New-Guid
     ContentUri    = $contentUri
-    DisplayName   = 'CrowdStrike Falcon Sensor Service Audit'
-    Description   = 'CrowdStrike Falcon Sensor Service Audit'
-    Path          = './CrowdStrikeFalconSensorAudit.json'
+    DisplayName   = 'CrowdStrike Falcon Sensor Deployment'
+    Description   = 'CrowdStrike Falcon Sensor Deployment'
+    Path          = './CrowdStrikeFalconSensorDeployment.json'
     Platform      = 'Windows'
     PolicyVersion = '1.0.0'
-    Mode          = 'Audit'
+    Mode          = 'ApplyAndAutoCorrect'
   }
 
   New-GuestConfigurationPolicy @PolicyConfig -Verbose

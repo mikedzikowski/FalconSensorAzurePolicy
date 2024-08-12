@@ -1,9 +1,9 @@
-$connectionString = 'wGHm3h+5dZFX1rg9kIR5/iokxwM2qNv8TyNAND6pk89Emc1Ci1SA/IXZUA6qt1uJIQKrv5WWeJj1+ASt8UqyRw=='
+$connectionString = <_ YOUR CONNECTION STRING _>
 $context = New-AzStorageContext -ConnectionString $connectionString
 $getParams = @{
     Context   = $context
-    Container = 'files'
-    Blob      = 'FalconSensorAuditPolicy.zip'
+    Container = <_ YOUR CONTAINER _>
+    File      = './FalconSensorDeployPolicy.zip'
 }
-$blob = Get-AzStorageBlob @getParams
+$blob = Set-AzStorageBlobContent @getParams
 $contentUri = $blob.ICloudBlob.Uri.AbsoluteUri
