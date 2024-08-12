@@ -1,5 +1,9 @@
-# FalconSensorAzurePolicy
+# FalconSensorAzurePolicy 
+
 Audit or deploy the CrowdStrike Falcon Sensor to windows endpoints using Azure Policy, PowerShell DSC and Azure Machine Configuration.
+
+> [!IMPORTANT]
+> Before running the following steps, please ensure that the guidance has been ollowed for the install/uninstall of the Falcon Sensor through the Falcon APIs on a windows >endpoint. [Falcon Powershell Installation Scripts](https://github.com/CrowdStrike/falcon-scripts/tree/main/powershell/install)
 
 1.Install the machine configuration DSC resource module from PowerShell Gallery. Reference - [Setup up local machine for authoring](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-set-up-authoring-environment)
 
@@ -7,14 +11,14 @@ Audit or deploy the CrowdStrike Falcon Sensor to windows endpoints using Azure P
 Install-Module -Name GuestConfiguration
 ```
 
-2.Using PowerShell 5.1, author the DSC coniguration. Reference - [Author a configuration](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-create-package#author-a-configuration)
+2.**Using PowerShell 5.1**, author the DSC coniguration. Reference - [Author a configuration](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/how-to-create-package#author-a-configuration)
 
 ```powershell
 . .\FalconSensorDeployPolicy.ps1
 Rename-Item -Path .\localhost.mof -NewName FalconSensorDeployPolicy.mof -PassThru
 ```
 
-3.Using PowerShell 7.3 - create a package that will audit and apply the configuration (Set).
+3.**Using PowerShell 7.3** - create a package that will audit and apply the configuration (Set).
 
 Example
 
