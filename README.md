@@ -127,3 +127,5 @@ Example result:
 8.After deploying the policy the expected result is as follows:
 
 ![alt text](images/result.png)
+
+![alt text](images/configurationmanagement.png)
