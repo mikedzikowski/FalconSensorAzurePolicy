@@ -35,8 +35,6 @@ Rename-Item -Path .\localhost.mof -NewName FalconSensorDeployPolicy.mof -PassThr
 
 3.**Using PowerShell 7.3** - create a package that will audit and apply the configuration (Set).
 
-Example
-
 ```powershell
 # Create a package that will audit and apply the configuration (Set).
 $params = @{
@@ -71,7 +69,7 @@ $blob = Set-AzStorageBlobContent @getParams
 $contentUri = $blob.ICloudBlob.Uri.AbsoluteUri
 ```
 
-Example result
+Example result:
 ![alt text](images/storage.png)
 Next, set the storage context with a SAS token using Set-StorageContext.ps1
 
@@ -123,7 +121,7 @@ $PolicyConfig      = @{
 New-AzPolicyDefinition -Name 'CrowdStrike Falcon Sensor Deployment' -Policy '.\FalconSensorDeployPolicy_DeployIfNotExists.json'
 ```
 
-Example
+Example result:
 ![alt text](images/policy.png)
 
 8.After deploying the policy the expected result is as follows:
